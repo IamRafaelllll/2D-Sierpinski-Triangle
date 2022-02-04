@@ -1,5 +1,5 @@
 int triLength = 300;
-int size = 500;
+int area = 500;
 int numOfTri = 0;
 public void setup()
 {
@@ -13,18 +13,18 @@ public void draw() {
 public void mousePressed() {
   numOfTri++;
   if (numOfTri < 7) {
-    size /= 2;
+    area /= 2;
     background(55, 55, 55);
     Tri(100, 415, triLength);
   } else {
     numOfTri = 0;
-    size = 250;
+    area = 250;
     Tri(100, 415, triLength);
   }
 }
 public void Tri(int x, int y, int triLength)
 {
-  if (triLength <size) {
+  if (triLength <area) {
     triangle(x, y, x+triLength/2, y-triLength, x+triLength, y);
   } else {
     Tri(x, y, triLength/2);
